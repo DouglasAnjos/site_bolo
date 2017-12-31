@@ -1,0 +1,146 @@
+body, html{
+  overflow: hidden;
+
+  max-width: 100%;
+  width: auto !important;
+  /*! background-color: #ff1ec5; */
+}
+
+/*header armazenando foto = div, na=menu , ul, li, a */
+/* menu com ul li a */
+.topo{
+	position: relative;
+	width: 98%;
+	/*! border: 1px solid #000; */
+	max-width: 100%;
+	height: 4em;
+    float: left;
+	margin-left: 0em;
+	border-radius: 30px;
+	display:  inline-grid;
+
+	/*! background-color: #000; */
+	/*! background-size: 100% 100%; */
+}
+
+	/*  imagem de canto, LOGO*/
+.logo_canto{
+	width: 10%;
+	height: 60px;
+	margin-left: 89%;
+	/*! border: 1px solid #000; */
+	background-image: url(teste/teste4.jpg);
+  	background-repeat: no-repeat;
+	background-size: 75% 97%;
+	background-position: 90% 70%;
+ 
+	position: absolute;
+ }
+
+
+/*retirei do li > a */
+.menu_info>ul>li{
+	display: inline;
+	list-style: none;
+	font-family:"DejaVu Serif",Georgia, monotype, "Times New Roman", Serif;
+	font-weight: bolder;
+}
+	
+	/*nav contendo ul li a , onde esta nosso menu com a home */
+  
+  /*foi alterado os valores de em para %  */
+.menu_info>ul>li>a{
+	text-decoration-line: underline;
+	color: #000;
+	margin-right: 5.5%;
+	font-size: 2em;
+ }
+	/*cores mudam de cor */
+.menu_info>ul>li>a:hover{
+	color: #52d5ea;
+	transition-duration: 2s;
+	font-weight: bolder;
+}
+	
+.imagem{
+	width: 84%;
+	height: 28em;
+	border-radius: 90px;
+	margin-top: 10px;
+}
+
+.imagem, iframe{
+	margin-left: 0.5%;
+	position: relative;
+}
+
+iframe{
+	border: none;
+	height: 33em;
+	overflow: hidden;
+	width: 98%;
+}	
+
+.central{
+
+	
+	/*! margin-top: 0%; */
+}
+
+
+
+/*		*/
+
+	
+#texto{
+	border: none;
+	background-color: transparent;
+	/*! font-weight: bolder; */
+	color: #4109f8;
+	font-size: 2em;
+	text-align: center;
+    /*! position: relative; */
+	/*! top: 5%; */
+	width: 99%;
+	/*! position: relative; */
+	font-family: "Times New Roman","DejaVu Serif",Georgia, monotype, Serif;
+	margin-top: 0%;
+}
+	
+
+.botaoVoltar{
+  position:  relative;
+  top: 69%;
+}
+.botaoAvancar{
+  position: relative;
+}
+.botaoVoltar, .botaoAvancar{
+  width: 78px;
+  height: 116px;
+}	
+  
+
+	
+
+	
+	
+.rodape{
+	border: 1px solid #000;
+	background-color: #000;
+	/*! height: 65px; */
+	width: 100%;
+	bottom: 1px;
+	position: absolute;
+	margin: 0% -1%;
+}
+.rodape > p{
+	color: #fff;
+}
+
+/* 
+	TAMANHO MINIMO 720, DESKTOP
+@media (min-width: 720px){
+	CRIAR
+*/
+  

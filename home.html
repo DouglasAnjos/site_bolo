@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+
+<title>Douglaz Anjos</title>
+<meta charset="utf-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<!--home.css-->
+<link rel="stylesheet" type="text/css" href="home/home.css" />
+
+<script type="text/javascript" src="home/home.js"></script>
+
+</head>
+<body onLoad="exibeImg()">
+	<!-- HEADER FIXO COM O MENU PRINCIPAL, COM FOTO DE FUNDO A ESQUERDA  -->
+	<header class="topo" id="topo">
+		<!-- FOTO DE CANTO 
+			<div class="logo_canto" id="logo_canto"></div>	
+		-->
+
+		<!-- NAV COM O MENU PRINCIPAL, HOME, GALERIAS, ENCOMENDAS , ETC...  -->
+		<nav class="menu_info">
+			<ul>
+				<li><a href="home.html"	onClick="irParaHome('../home.html')">Home</a></li>
+				<li><a href="arquivos/galeria.html"	onClick="sairDaHome('arquivos/galeria.html')" target="documento">Galerias</a></li>
+				<li><a href="arquivos/receita.html" onClick="sairDaHome('arquivos/receita.html')" target="documento">Receitas</a></li>
+				<li><a href="arquivos/quemSomos.html"	onClick="sairDaHome('arquivos/quemSomos.html')" target="documento">Quem Somos</a></li>
+				<li><a href="arquivos/login.html"	onClick="sairDaHome('arquivos/login.html')" target="documento">Login</a></li>
+
+			</ul>
+		</nav>
+	</header>
+	<!-- FIM -->
+
+	<br />
+
+
+	<div class="central">
+		<input type="text" id="texto" disabled="true">
+		<img id="botao" class="botaoVoltar" onClick="fnTrocaImagem(-1)" src="home/home_photos/voltar.png"/>
+			<img src=" " id="imagem" class="imagem">
+		<img id="botao1" class="botaoAvancar" onClick="fnTrocaImagem(1)" src="home/home_photos/avancar.png"/>
+			<!-- IFRAME CHAMANDO TODAS AS PAGINAS -->
+		<iframe name="documento" id="documento"></iframe>
+	</div>
+
+	<fieldset class="rodape">
+		<p align="center"> © Copyright 2017 - todos os direitos ® </p>
+	</fieldset>
+	<!--FORMULARIO -->
+	<form></form>
+
+
+</body>
+</html>

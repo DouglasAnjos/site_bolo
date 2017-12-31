@@ -1,0 +1,91 @@
+  /**/
+@-moz-document url-prefix(){ 
+
+ /* FIREFOX*/}
+  /**/
+@media screen and (-webkit-min-device-pixel-ratio:0){ /* CHROME*/
+  body{
+  /*background:-webkit-linear-gradient(right, #000, #fff, #f00, #00f); /* CHROME* -webkit-*/
+  }
+}
+  /**/
+  /* */
+
+/*PADRAO*/
+
+
+body{
+  /*! background:-moz-linear-gradient(right, #000, #fff, #f00, #00f); */ /* FIREFOX  -moz-*/
+
+}
+
+
+h1{
+  text-align: center;
+  /*! background-color: #f553c5; */
+  border-radius: 10px;
+}
+
+
+ .imagens{
+  /*! border: 1px solid #f6f6f8; */
+  height: 8em;
+  width: 10em;
+  margin: 1px 1px 1px 1px;
+  
+}
+  
+
+#botao{
+	position: absolute;
+	left: 97%;
+	top: 2%;
+	border: none;
+	height: 3%;
+	width: 2%;
+	cursor: pointer;
+	/*
+	background-image: url();
+	background-size: 100% 100%;
+	*/
+}
+
+#botao:hover{
+
+	height: 10%;
+	width: 20%;
+}
+
+.foto{
+  height: 10em;
+  width: 10em;
+  margin: 1.5px 8px 1px 1.5px;
+  float: left;
+}
+.foto > p{
+  text-align: center;
+  margin-top: auto;
+}
+
+#exibidor{
+  display: none;
+  background-color: rgba(203, 87, 148, 0.79);
+}
+.botaoVoltar{
+  position: relative;
+  margin-left: -1%;
+  top: 40%;
+}
+.botaoAvancar{
+  position: relative;
+  margin-left: 95%;
+  top: -48%;
+}
+.botaoVoltar, .botaoAvancar{
+  width: 70px;
+  height: 80px;
+}
+#selecaoDeEscolha{
+  margin-top: -6%;
+  align: center;
+}

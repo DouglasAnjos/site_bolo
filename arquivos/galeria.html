@@ -1,0 +1,309 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="galeria/galeria.css" />
+
+<script type="text/javascript" src="galeria/galeria.js"></script>
+
+<title>Galerias</title>
+</head>
+<body>
+
+	<h1>Galerias de Fotos</h1>
+	
+	<button onclick="mostra('item1')">Bolos p/ Festas</button>	
+	<button onclick="mostra('item2')">Bolos de Pote</button>	
+	<button onclick="mostra('item3')">Lembrancinhas p/ Festa</button>	
+	<button onclick="mostra('item4')">Doces de Sobremesas</button>	
+	<button onclick="mostra('item5')">Pão de Mel</button>	
+
+		<!-- IMAGEM DO TAMANHO REAL -->
+	<div id="exibidor">
+		<img class="botaoVoltar" onClick="fnTrocaImagem(-1)" src="galeria/arquivos_fotos/_extras/voltar.png"/>
+			<img id="imagemDeDestaque" src=""> 
+				<img src="galeria/arquivos_fotos/_extras/fechar/xr.png" id="botao" onclick="fechar()" />
+		<img class="botaoAvancar" onClick="fnTrocaImagem(1)" src="galeria/arquivos_fotos/_extras/avancar.png"/>
+
+		<div id="selecaoDeEscolha">
+			<button onClick="abrirInfo()">Informações</button>
+				<fieldiset id="info" style="display: none;">
+					sdfsddd
+				</fieldiset>	
+			<button onClick="abrirCampo('comprar')">Eu Quero!</button>
+				<fieldiset id="comprar" style="display: none;">
+					
+				</fieldiset>	
+		</div>
+
+	</div>
+
+		<!-- OPÇÃO DE BOTÕES-->
+	<div id="item1" style="display: none;">
+	<fieldset>
+		<legend align="center"><u>Bolos p/ Festas</u></legend>
+		<div class="foto">
+			<img class="imagens" src="galeria/arquivos_fotos/bolo_festa/bolo_festa_1.jpg" onclick="mostrarImg('galeria/arquivos_fotos/bolo_festa/bolo_festa_1.jpg');">
+			<p>Bolo P/ Festa <b>KitKat</b></p>
+		</div>
+
+		<div class="foto">
+			<img class="imagens" src="galeria/arquivos_fotos/bolo_festa/bolo_festa_2.jpg" onclick="mostrarImg('galeria/arquivos_fotos/bolo_festa/bolo_festa_2.jpg');"> 
+			<p>Bolo P/ Festa <b>M&M's</b></p>
+		</div>
+		
+		<div class="foto">
+			<img class="imagens" src="galeria/arquivos_fotos/bolo_festa/bolo_festa_4.jpg" onclick="mostrarImg('galeria/arquivos_fotos/bolo_festa/bolo_festa_4.jpg'); "> 
+			<p>Bolo p/ Festa <b>Chocolhate</b></p>
+		</div>
+	<!--
+		<div class="foto">
+			<img class="imagens" src="fotos_aleatorias/1.jpg" onclick="mostrarImg('fotos_aleatorias/1.jpg');"> 
+			<p>Teste1</p>
+		</div>
+
+		<div class="foto">
+			<img class="imagens" src="fotos_aleatorias/2.jpeg" onclick="mostrarImg('fotos_aleatorias/2.jpeg');"> 
+			<p>Teste1</p>
+		</div>
+
+
+		<div class="foto">
+			<img class="imagens" src="fotos_aleatorias/3.jpg" onclick="mostrarImg('fotos_aleatorias/3.jpg'); "> 
+			<p>Teste1</p>
+		</div>
+
+		<div class="foto">
+			<img class="imagens" src="fotos_aleatorias/1.jpg" onclick="mostrarImg('fotos_aleatorias/1.jpg');"> 
+			<p>Teste1</p>
+		</div>		
+
+		<div class="foto">
+			<img class="imagens" src="fotos_aleatorias/2.jpeg" onclick="mostrarImg('fotos_aleatorias/2.jpeg');">
+			<p>Teste1</p>
+		</div>		
+		
+		<div class="foto">
+			<img class="imagens" src="fotos_aleatorias/3.jpg" onclick="mostrarImg('fotos_aleatorias/3.jpg');">
+			<p>Teste1</p>
+		</div>	
+	-->		
+
+	</fieldset>
+	</div>
+
+	<div id="item2" style="display: none;">
+	<fieldset>
+		<legend align="center"><u>Bolos de Pote</u></legend>
+		<div class="foto">
+			<img class="imagens" src="galeria/arquivos_fotos/bolo_pote/bolo_pote_1.jpg" onclick="mostrarImg('galeria/arquivos_fotos/bolo_pote/bolo_pote_1.jpg');"> 
+			<p>Bolo de Pote  <b> Sensação</b></p>
+		</div>		
+
+		<div class="foto">
+			<img class="imagens" src="galeria/arquivos_fotos/bolo_pote/bolo_pote_2.jpg" onclick="mostrarImg('galeria/arquivos_fotos/bolo_pote/bolo_pote_2.jpg');"> 
+			<p>Bolo de Pote <b>Chocolate</b></p>
+		</div>
+
+		<div class="foto">
+			<img class="imagens" src="galeria/arquivos_fotos/bolo_pote/bolo_pote_4.jpg" onclick="mostrarImg('galeria/arquivos_fotos/bolo_pote/bolo_pote_4.jpg'); "> 
+			<p>Bolo de Pote <b>Diversos Sabores</b></p>
+		</div>				
+
+	<!--	
+		<div class="foto">
+			<img class="imagens" src="fotos_aleatorias/1.jpg" onclick="mostrarImg('fotos_aleatorias/1.jpg');"> 
+			<p>Teste1</p>
+		</div>				
+
+		<div class="foto">
+			<img class="imagens" src="fotos_aleatorias/2.jpeg" onclick="mostrarImg('fotos_aleatorias/2.jpeg');"> 
+			<p>Teste1</p>
+		</div>				
+
+		<div class="foto">
+			<img class="imagens" src="fotos_aleatorias/1.jpg" onclick="mostrarImg('fotos_aleatorias/1.jpg');"> 
+			<p>Teste1</p>
+		</div>				
+
+		<div class="foto">
+			<img class="imagens" src="fotos_aleatorias/3.jpg" onclick="mostrarImg('fotos_aleatorias/3.jpg'); "> 
+			<p>Teste1</p>
+		</div>				
+
+		<div class="foto">
+			<img class="imagens" src="fotos_aleatorias/2.jpeg" onclick="mostrarImg('fotos_aleatorias/2.jpeg');">
+			<p>Teste1</p>
+		</div>		
+
+		<div class="foto">
+			<img class="imagens" src="fotos_aleatorias/3.jpg" onclick="mostrarImg('fotos_aleatorias/3.jpg');">
+			<p>Teste1</p>
+		</div>		
+	-->	
+	</fieldset>
+	</div>
+
+	<div id="item3" style="display: none;">
+	<fieldset>
+		<legend align="center"><u>Lembrancinhas para Feste</u></legend>
+			
+		<div class="foto">
+			<img class="imagens" src="fotos_aleatorias/1.jpg" onclick="mostrarImg('fotos_aleatorias/1.jpg');"> 
+			<p>Teste1</p>
+		</div>		
+
+		<div class="foto">
+			<img class="imagens" src="fotos_aleatorias/2.jpeg" onclick="mostrarImg('fotos_aleatorias/2.jpeg');"> 
+			<p>Teste1</p>
+		</div>		
+
+		<div class="foto">
+			<img class="imagens" src="fotos_aleatorias/3.jpg" onclick="mostrarImg('fotos_aleatorias/3.jpg'); "> 
+			<p>Teste1</p>
+		</div>		
+
+		<div class="foto">
+			<img class="imagens" src="fotos_aleatorias/1.jpg" onclick="mostrarImg('fotos_aleatorias/1.jpg');"> 
+			<p>Teste1</p>
+		</div>				
+
+		<div class="foto">
+			<img class="imagens" src="fotos_aleatorias/2.jpeg" onclick="mostrarImg('fotos_aleatorias/2.jpeg');"> 
+			<p>Teste1</p>
+		</div>				
+
+		<div class="foto">
+			<img class="imagens" src="fotos_aleatorias/1.jpg" onclick="mostrarImg('fotos_aleatorias/1.jpg');"> 
+			<p>Teste1</p>
+		</div>				
+
+		<div class="foto">
+			<img class="imagens" src="fotos_aleatorias/3.jpg" onclick="mostrarImg('fotos_aleatorias/3.jpg'); "> 
+			<p>Teste1</p>
+		</div>
+
+		<div class="foto">
+			<img class="imagens" src="fotos_aleatorias/2.jpeg" onclick="mostrarImg('fotos_aleatorias/2.jpeg');">
+			<p>Teste1</p>
+		</div>
+
+		<div class="foto">
+			<img class="imagens" src="fotos_aleatorias/3.jpg" onclick="mostrarImg('fotos_aleatorias/3.jpg');">
+			<p>Teste1</p>
+		</div>
+	</fieldset>
+	</div>
+
+	<div id="item4" style="display: none;">
+	<fieldset>
+		<legend align="center"><u>Doces de Sobremesa</u></legend>
+
+		<div class="foto">
+			<img class="imagens" src="fotos_aleatorias/1.jpg" onclick="mostrarImg('fotos_aleatorias/1.jpg');"> 
+			<p>Teste1</p>
+		</div>
+
+		<div class="foto">
+			<img class="imagens" src="fotos_aleatorias/2.jpeg" onclick="mostrarImg('fotos_aleatorias/2.jpeg');"> 
+			<p>Teste1</p>
+		</div>
+
+		<div class="foto">
+			<p>Teste1</p>
+		</div>
+		
+		<div class="foto">
+			<img class="imagens" src="fotos_aleatorias/3.jpg" onclick="mostrarImg('fotos_aleatorias/3.jpg'); "> 
+			<p>Teste1</p>
+		</div>
+
+		<div class="foto">
+			<img class="imagens" src="fotos_aleatorias/1.jpg" onclick="mostrarImg('fotos_aleatorias/1.jpg');"> 
+			<p>Teste1</p>
+		</div>
+
+		<div class="foto">
+			<img class="imagens" src="fotos_aleatorias/2.jpeg" onclick="mostrarImg('fotos_aleatorias/2.jpeg');"> 
+			<p>Teste1</p>
+		</div>
+
+		<div class="foto">
+			<img class="imagens" src="fotos_aleatorias/1.jpg" onclick="mostrarImg('fotos_aleatorias/1.jpg');"> 
+			<p>Teste1</p>
+		</div>
+
+		<div class="foto">
+			<img class="imagens" src="fotos_aleatorias/3.jpg" onclick="mostrarImg('fotos_aleatorias/3.jpg'); "> 
+			<p>Teste1</p>
+		</div>
+
+		<div class="foto">
+			<img class="imagens" src="fotos_aleatorias/2.jpeg" onclick="mostrarImg('fotos_aleatorias/2.jpeg');">
+			<p>Teste1</p>
+		</div>
+
+		<div class="foto">
+			<img class="imagens" src="fotos_aleatorias/3.jpg" onclick="mostrarImg('fotos_aleatorias/3.jpg');">
+			<p>Teste1</p>
+		</div>
+
+	</fieldset>
+	</div>
+
+	<div id="item5" style="display: none;">
+	<fieldset>
+		<legend align="center"><u>Pão de Mel</u></legend>
+		<div class="foto">
+			<img class="imagens" src="fotos_aleatorias/1.jpg" onclick="mostrarImg('fotos_aleatorias/1.jpg');"> 
+			<p>Teste1</p>
+		</div>
+
+		<div class="foto">
+			<img class="imagens" src="fotos_aleatorias/2.jpeg" onclick="mostrarImg('fotos_aleatorias/2.jpeg');"> 
+			<p>Teste1</p>
+		</div>
+
+		<div class="foto">
+			<img class="imagens" src="fotos_aleatorias/3.jpg" onclick="mostrarImg('fotos_aleatorias/3.jpg'); "> 
+			<p>Teste1</p>
+		</div>
+
+		<div class="foto">
+			<img class="imagens" src="fotos_aleatorias/1.jpg" onclick="mostrarImg('fotos_aleatorias/1.jpg');"> 
+			<p>Teste1</p>
+		</div>
+
+		<div class="foto">
+			<img class="imagens" src="fotos_aleatorias/2.jpeg" onclick="mostrarImg('fotos_aleatorias/2.jpeg');"> 
+			<p>Teste1</p>
+		</div>
+
+		<div class="foto">
+			<img class="imagens" src="fotos_aleatorias/1.jpg" onclick="mostrarImg('fotos_aleatorias/1.jpg');"> 
+			<p>Teste1</p>
+		</div>
+
+		<div class="foto">
+			<img class="imagens" src="fotos_aleatorias/3.jpg" onclick="mostrarImg('fotos_aleatorias/3.jpg'); "> 
+			<p>Teste1</p>
+		</div>
+
+		<div class="foto">
+			<img class="imagens" src="fotos_aleatorias/2.jpeg" onclick="mostrarImg('fotos_aleatorias/2.jpeg');">
+			<p>Teste1</p>
+		</div>
+
+		<div class="foto">
+			<img class="imagens" src="fotos_aleatorias/3.jpg" onclick="mostrarImg('fotos_aleatorias/3.jpg');">
+			<p>Teste1</p>
+		</div>
+
+	</fieldset>
+	</div>
+
+
+
+</body>
+</html>

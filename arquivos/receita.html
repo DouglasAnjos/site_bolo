@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset = "utf-8">
+
+<script type="text/javascript">
+	
+function mostra(aparecer){
+		//document.getElementById(aparecer).style.display = "block";
+		//^^funfou
+		var vVetor = new Array ('item1', 'item2', 'item3', 'item4', 'item5' );
+		w = document.getElementById(aparecer)
+			if (w.style.display=="block"){
+				w.style.display='none';
+			}else{
+				for (i=0; i<vVetor.length; i++){
+					if (vVetor[i] == aparecer){
+						w.style.display='block';
+					}else{
+						document.getElementById(vVetor[i]).style.display='none';
+					}
+				}
+			}
+	}
+
+
+
+
+
+function teste(aparecer){
+		//document.getElementById(aparecer).style.display = "block";
+		//^^funfou
+		var vVetor = new Array ('receita1', 'receita2', 'receita3', 'receita4' );
+		w = document.getElementById(aparecer)
+			if (w.style.display=="block"){
+				w.style.display='none';
+			}else{
+				for (i=0; i<vVetor.length; i++){
+					if (vVetor[i] == aparecer){
+						w.style.display='block';
+					}else{
+						document.getElementById(vVetor[i]).style.display='none';
+					}
+				}
+			}
+	}
+</script>
+
+
+</head>
+<body>
+<h1 align="center">Livro de Receita</h1>
+
+
+
+<button onclick="mostra('item1')">Bolos</button>	
+<button onclick="mostra('item2')">Doces p/ Festa</button>	
+<button onclick="mostra('item3')">Sobremesas</button>	
+
+<div id="item1" style="display: none;">
+	<fieldset>
+		<legend align="center"><u>Bolos Simples</u></legend>
+		<button onclick="teste('receita1')"> Bolo de Cenoura </button>
+		<button onclick="teste('receita2')"> Bolo de Chocolate </button>
+		<div id="receita1" style="display: none;">
+			<fieldset>
+			<legend align="center">Cenoura</legend>
+			<p align="center">
+				<b>Ingredientes</b>: <br/>
+    			<b>1</b>.1/2 xícara (chá) de óleo. <br/>
+    			<b>2</b>.3 cenouras médias raladas. <br/>
+    			<b>3</b>.4 ovos. <br/>
+    			<b>4</b>.2 xícaras (chá) de açúcar. <br/>
+    			<b>5</b>.2 e 1/2 xícaras (chá) de farinha de trigo. <br/>
+    			<b>6</b>.1 colher (sopa) de fermento em pó. <br/>
+    			<b>Cobertura</b> <br/>
+    			<b>1</b>.1 colher (sopa) de manteiga. <br/>
+    			<b>2</b>.3 colheres (sopa) de chocolate em pó. <br/>
+    			<b>3</b>.1 xícara (chá) de açúcar. <br/>
+    			<b>4</b>.1 xícara (chá) de leite. <br/>
+			</p>	
+			</fieldset>
+		</div>
+		<div id="receita2" style="display: none;">
+			<fieldset>
+			<legend align="center">Chocolate</legend>
+			<p align="center">
+				<b>Ingredientes</b>: <br/>
+    			<b>1</b>.1/2 xícara (chá) de óleo. <br/>
+    			<b>2</b>.3 cenouras médias raladas. <br/>
+    			<b>3</b>.4 ovos. <br/>
+    			<b>4</b>.2 xícaras (chá) de açúcar. <br/>
+    			<b>5</b>.2 e 1/2 xícaras (chá) de farinha de trigo. <br/>
+    			<b>6</b>.1 colher (sopa) de fermento em pó. <br/>
+    			<b>Cobertura</b> <br/>
+    			<b>1</b>.1 colher (sopa) de manteiga. <br/>
+    			<b>2</b>.3 colheres (sopa) de chocolate em pó. <br/>
+    			<b>3</b>.1 xícara (chá) de açúcar. <br/>
+    			<b>4</b>.1 xícara (chá) de leite. <br/>
+			</p>	
+			</fieldset>
+		</div>
+</div>
+
+
+<div id="item2" style="display: none;">
+	<fieldset>
+		<legend align="center"><u>Doces em Geral</u></legend>
+		<button onclick="teste('receita3')"> Brigadeiro </button>
+		<button onclick="teste('receita4')"> Beijinho </button>
+		<div id="receita3" style="display: none;">
+			<fieldset>
+			<legend align="center">Brigadeiro</legend>
+			<p align="center">
+				<b>Ingredientes</b>: <br/>
+    			<b>1</b>.1/2 xícara (chá) de óleo. <br/>
+    			<b>2</b>.3 cenouras médias raladas. <br/>
+    			<b>3</b>.4 ovos. <br/>
+    			<b>4</b>.2 xícaras (chá) de açúcar. <br/>
+    			<b>5</b>.2 e 1/2 xícaras (chá) de farinha de trigo. <br/>
+    			<b>6</b>.1 colher (sopa) de fermento em pó. <br/>
+    			<b>Cobertura</b> <br/>
+    			<b>1</b>.1 colher (sopa) de manteiga. <br/>
+    			<b>2</b>.3 colheres (sopa) de chocolate em pó. <br/>
+    			<b>3</b>.1 xícara (chá) de açúcar. <br/>
+    			<b>4</b>.1 xícara (chá) de leite. <br/>
+			</p>	
+			</fieldset>
+		</div>
+		<div id="receita4" style="display: none;">
+			<fieldset>
+			<legend align="center">Beijinho</legend>
+			<p align="center">
+				<b>Ingredientes</b>: <br/>
+    			<b>1</b>.1/2 xícara (chá) de óleo. <br/>
+    			<b>2</b>.3 cenouras médias raladas. <br/>
+    			<b>3</b>.4 ovos. <br/>
+    			<b>4</b>.2 xícaras (chá) de açúcar. <br/>
+    			<b>5</b>.2 e 1/2 xícaras (chá) de farinha de trigo. <br/>
+    			<b>6</b>.1 colher (sopa) de fermento em pó. <br/>
+    			<b>Cobertura</b> <br/>
+    			<b>1</b>.1 colher (sopa) de manteiga. <br/>
+    			<b>2</b>.3 colheres (sopa) de chocolate em pó. <br/>
+    			<b>3</b>.1 xícara (chá) de açúcar. <br/>
+    			<b>4</b>.1 xícara (chá) de leite. <br/>
+			</p>	
+			</fieldset>
+		</div>
+</div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<script type="text/javascript">
+function mostra(){
+	document.getElementById("item1").style="display: none;";
+	document.getElementById("item2").style="display: block;";
+	document.getElementById("cadastro").style="display: none;";
+	document.getElementById("login").style="display: block;";
+	document.getElementById("texto2").style="display: block;";
+	document.getElementById("texto1").style="display: none;";
+}
+
+function esconde(){
+	document.getElementById("item1").style="display: block;";
+	document.getElementById("item2").style="display: none;";
+	document.getElementById("cadastro").style="display: block;";
+	document.getElementById("login").style="display: none;";
+	document.getElementById("texto1").style="display: block;";
+	document.getElementById("texto2").style="display: none;";
+
+}
+
+function cadastrar(){
+	var senha1 = document.formulario.senha1.value;
+	var senha2 = document.formulario.senha2.value;
+	var usuario = document.formulario.usuario.value;
+	//VERICICAÇAO DE LOGIN
+	if (usuario == ''){
+		alert('USUARIO EM BRANCO');
+		document.formulario.usuario.style = "background: red;";
+	}
+
+	//VERIFICAÇÃO DE SENHA
+	if ((senha1 == '') && (senha2 == '')){
+		alert ('DIGITE UMA SENHA');
+		document.formulario.senha1.style = "background: red";
+		document.formulario.senha2.style = "background: red";
+	}
+	if (senha1 != senha2){
+		alert ('SUA SENHA NÃO CONFERE!');
+		document.formulario.senha1.style = "background: red";
+		document.formulario.senha2.style = "background: red";
+	}else{
+		document.formulario.senha1.style = "none;";
+		document.formulario.senha1.style = "none;";
+	}
+	if ((senha1 == senha2) && (senha1 != '') && (usuario != '')){
+		document.formulario.action = "login/cadastro.php"; 
+		document.forms.formulario.submit();
+	}
+
+}
+
+
+	//LOGIN
+function logar(){
+	document.formulario.action = "login/login.php";
+	document.forms.formulario.submit();
+
+}
+
+</script>
+
+</head>
+<body>
+<h1 id="texto1" align="center">Login</h1>
+<h1 id="texto2" align="center" style="display: none;">Cadastro</h1>
+<form action="" method="POST" name="formulario">
+	
+	<!--LOGIN -->
+<fieldset id="itens">
+	
+	<span id="item1">
+		Login/Usuário:<input type="text" name="login"> <br/>
+		Senha:<input type="password" name="senha"> <br/>
+		<input type="button" name="enviarLogin" value="Logar" onClick="logar()" > 	
+	</span>
+	<br/>
+
+	<a href="#" id="cadastro" onclick="mostra()">Cadastra-se</a>
+	<a href="#" id="login" onclick="esconde()" style="display: none;">Login</a> <br>
+	
+		<!--CADASTRO -->
+	<div id="item2" style="display: none;">
+
+		Nome Completo:<input type="text" name="nome"> <br/>
+		e-mail:<input type="text" name="email"> <br/>
+		login/usuário:<input type="text" name="usuario"> <br/>
+		senha:<input type="password" name="senha1"> <br/>
+		repetita a senha:<input type="password" name="senha2"> <br/>
+		<input type="button" name="enviarCadastro" value="Cadastrar" onClick="cadastrar()">
+
+	</div>
+
+
+</fieldset>
+
+
+</form>
+</body>
+</html>
